@@ -10,7 +10,7 @@ storepath=/Users/yourusername/Movies ### No trailing slash
 ripcounter=1
 rippath=$storepath/zAutoRipping-$discname-t$videotitle
 
-### Start the work #####################################################
+### Start the work ###########################################################
 mkdir -p $rippath
 
 ### Rip the chapter files 
@@ -23,7 +23,7 @@ do
 done
 sleep 5
 
-### Clean up
+### Clean up #################################################################
 zdonePath=$storepath/RipDone-$discname-t$videotitle
 mv $rippath $zdonePath
 echo Completed $discname
