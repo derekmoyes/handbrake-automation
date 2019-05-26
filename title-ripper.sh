@@ -7,6 +7,8 @@
 # DVDPath, Linux /dev/dvd, Mac /dev/device
 dvdpath=/dev/dvd
 discname=OurVacationDisc1
+# Encoder Tune: film, animation, grain 
+encodertune=film
 storepath=/Users/yourusername/Movies # no trailing slash
 
 ### Dont change stuff below here #############################################
@@ -24,7 +26,7 @@ for title in $(seq $count)
 do
     ripname=$rippath/$discname-t$title.mp4
     echo Ripping $discname Title $title to $ripname
-    HandBrakeCLI --preset-import-gui -Z "General/HQ 1080p30 Surround" --encoder-tune animation --input $dvdpath --title $title --output $ripname
+    HandBrakeCLI --preset-import-gui -Z "General/HQ 1080p30 Surround" --encoder-tune $encodertune --input $dvdpath --title $title --output $ripname --all-audio
 done
 
 ### Clean up #################################################################
