@@ -6,7 +6,7 @@
 ### Fill in these variables ################################################## 
 # On Linux, use grep, on Mac, use ggrep, after you `brew install grep` to obtain the GNU version.
 grepbin=ggrep
-# DVDPath, Linux /dev/dvd, Mac /dev/device
+# DVDPath, Linux /dev/dvd, Mac /dev/device, VIDEO_TS
 dvdpath=/dev/dvd
 discname=OurVacationDisc1
 # Encoder Tune: film, animation, grain 
