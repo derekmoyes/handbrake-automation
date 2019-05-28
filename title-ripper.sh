@@ -4,6 +4,8 @@
 #   https://superuser.com/questions/394516/how-to-convert-50-episodes-from-dvd-into-50-mp4-with-handbrake-easily
 
 ### Fill in these variables ################################################## 
+# On Linux, use grep, on Mac, use ggrep, after you `brew install grep` to obtain the GNU version.
+grepbin=ggrep
 # DVDPath, Linux /dev/dvd, Mac /dev/device
 dvdpath=/dev/dvd
 discname=OurVacationDisc1
@@ -18,7 +20,7 @@ rippath=$storepath/zAutoRipping-$discname
 # Read handbrake's stderr into variable
 rawout=$(HandBrakeCLI -i $dvdpath -t 0 2>&1 >/dev/null)
 # Parse the variable to get the count
-count=$(echo $rawout | grep -Eao "\\+ title [0-9]+:" | wc -l)
+count=$(echo $rawout | $grepbin -Pao " title \d{1,2}+:" | wc -l)
 
 mkdir -p $rippath
 
@@ -30,6 +32,7 @@ do
 done
 
 ### Clean up #################################################################
-zdonePath=$storepath/RipDone-$discname
+zdonePath=$storepath/RipDone
+mkdir -p $zdonePath
 mv $rippath $zdonePath
-echo Completed $discname
+echo Completed $discname, stored at $zdonePath.
