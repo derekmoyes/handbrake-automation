@@ -34,5 +34,5 @@ done
 ### Clean up #################################################################
 zdonePath=$storepath/RipDone
 mkdir -p $zdonePath
-mv $rippath $zdonePath
+mv $rippath $zdonePath/$discname
 echo Completed $discname, stored at $zdonePath.

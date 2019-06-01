@@ -13,7 +13,7 @@ storepath=/Users/yourusername/Movies ### No trailing slash
 
 ### Dont change stuff below here #############################################
 ripcounter=1
-rippath=$storepath/zAutoRipping-$discname-t$videotitle
+rippath=$storepath/zAutoRipping-$discname
 
 ### Start the work ###########################################################
 mkdir -p $rippath
@@ -31,5 +31,5 @@ sleep 5
 ### Clean up #################################################################
 zdonePath=$storepath/RipDone
 mkdir -p $zdonePath
-mv $rippath $zdonePath
+mv $rippath $zdonePath/$discname
 echo Completed $discname, stored at $zdonePath.
