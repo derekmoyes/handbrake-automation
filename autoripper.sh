@@ -74,7 +74,7 @@ case "${riptype}" in
         do
             ripname=$rippath/$discname-t$title.mp4
             echo Ripping $discname Title $title to $ripname
-            HandBrakeCLI --preset $hbpreset --encoder-tune $hbencodertune --input $dvdpath --output $ripname --title $title --all-audio
+            HandBrakeCLI --preset-import-gui --preset "$hbpreset" --encoder-tune $hbencodertune --input $dvdpath --output $ripname --title $title --all-audio
         done 
     ;; 
     chapter*)
@@ -84,7 +84,7 @@ case "${riptype}" in
         do
             ripname=$rippath/$discname-t$videotitle-ch$ripcounter.mp4
             echo Ripping Title $videotitle Chapter $ripcounter to $ripname
-            HandBrakeCLI --preset $hbpreset --encoder-tune $hbencodertune --input $dvdpath --output $ripname --title $videotitle -c $ripcounter --all-audio
+            HandBrakeCLI --preset-import-gui --preset "$hbpreset" --encoder-tune $hbencodertune --input $dvdpath --output $ripname --title $videotitle -c $ripcounter --all-audio
             ((ripcounter++))
         done
     ;;
@@ -96,7 +96,7 @@ sleep 5
 zdonePath=$storepath/RipDone
 mkdir -p $zdonePath
 mv $rippath $zdonePath/$discname
+echo Completed $discname, stored at $zdonePath.
 case "${machine}" in
     Mac*)    say Disc $discname rip complete;;
 esac
-echo Completed $discname, stored at $zdonePath.

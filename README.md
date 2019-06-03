@@ -1,7 +1,7 @@
 # handbrake-automation
 * Requires HandBrakeCLI, available here: https://handbrake.fr/downloads.php 
 * Tested with HandBrakeCLI 1.0.2
-* Written on MacOS, your OS may be a bit different.
+* If running on a Mac, also requires GNU Grep (ggrep) from https://brew.sh/
 
 ## autoripper.sh
 This will rip VOB titles or DVDs either in title or chapter mode, as if you were using the HandBrake GUI, only the setup is faster.
