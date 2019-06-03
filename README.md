@@ -4,7 +4,7 @@
 * If running on a Mac, also requires GNU Grep (ggrep) from https://brew.sh/
 
 ## autoripper.sh
-This will rip VOB titles or DVDs either in title or chapter mode, as if you were using the HandBrake GUI, only the setup is faster.
+This will rip VOB titles or DVDs in either title or chapter mode, as if you were using the HandBrake GUI, only the setup is faster.
 
 Edit the file and fill in the variables that are pertinent to you.
 
