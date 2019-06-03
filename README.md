@@ -14,8 +14,6 @@ Chapter ripping will rip a single VOB title into individual chapter files, which
 
 ## OLD: chapter-ripper.sh
 Chapter ripper has been superseded by autoripper.
-This will rip a VOB title into individual chapter files. Very convenient for converting home movie DVDs created as one large movie, from many smaller ones.
 
 ## OLD: title-ripper.sh
 Title ripper has been superseded by autoripper.
-This will rip VOB titles or DVDs as if you were using the handbrake GUI, except faster, if all the tracks are similar, you don't have to GUI select them all.
